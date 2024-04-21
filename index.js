@@ -1,3 +1,0 @@
-console.log(
-    "Divya gupta"
-)
