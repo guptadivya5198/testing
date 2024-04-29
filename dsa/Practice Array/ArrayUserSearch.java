@@ -3,17 +3,17 @@ import java.util.Scanner;
 public class ArrayUserSearch {
     public static void main(String args[]){
 
-       Scanner sc = new Scanner(System.in);
-       int size = sc.nextInt();
+       Scanner s = new Scanner(System.in);
+       int size = s.nextInt();
        int numbers[] = new int[size];
 
 
         //input
         for(int i =0;i<size; i++) {
-            numbers[i] = sc.nextInt();
+            numbers[i] = s.nextInt();
         }
         // for user found element
-        int x = sc.nextInt();
+        int x = s.nextInt();
 
             //    output
             
