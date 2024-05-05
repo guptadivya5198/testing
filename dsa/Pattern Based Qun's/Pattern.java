@@ -1,8 +1,30 @@
 
 public class Pattern
 {
+    // 4th pattern
+
+        /*
+         *****
+         ****
+         *** 
+         ** 
+         * 
+         */
+    static void triangle(int N){
+        for(int i =0; i< N; i++){
+                for (int j =N;j> i; j--)
+                {
+                    System.out.print(N-j+1+" ");
+                }
+                System.out.println( );
+             }
+        }
+
     public static void main(String args[])
     {
+        int N =5;
+        triangle(N);
+        
         // patterns printing
         //  1st pattern   
             /* 
@@ -50,23 +72,6 @@ public class Pattern
         //     }
         //     System.out.println();
         // }
-
-        // 4th pattern
-
-        /*
-         *****
-         ****
-         *** 
-         ** 
-         * 
-         */
-
-         for(int n =1; n<5; n++){
-            for (int j =0;j< 4-n+1; j++){
-                System.out.print("*");
-            }
-            System.out.println( );
-         }
-
     }
 }
+
