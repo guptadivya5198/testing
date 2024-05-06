@@ -86,5 +86,42 @@
 // const t4 =performance.now();
 // console.log("This took" + (t3-t4) +'ms');
 
+// Event Loop(Important)
+// setTimeOut function
 
-// singlethreaded command
+
+// setTimeout(function(){
+//     console.log("Third");
+// },5000);
+
+// function sync(){
+//     console.log('first');
+// }
+// sync();
+
+// console.log("second");
+
+
+// promise in js
+
+// let promise1 = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("I am inside Promise 1");
+//     },5000);
+
+//     // resolve(1234);
+//     reject(new error("Error occurs"));
+// });
+//     promise1.then((value) => {console.log(value)});
+//     promise1.catch((error) => {console.log("Recived an error")});
+
+// let promise2 = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("I am inside Promise 2");
+//     },3000);
+
+//     resolve(1989);
+//     reject(new error("Error occurs"));
+
+// });
+// console.log("First");
