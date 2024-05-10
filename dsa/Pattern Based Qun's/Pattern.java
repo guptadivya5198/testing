@@ -136,28 +136,64 @@ public class Pattern
                     System.out.print(start);
                     start = 1 -start;
                 }
-                System.out.println();
+                System.out.println(" ");
         }
     }
     static void pattern12(int N){
         int space= 2*(N-1);
         for(int i =1; i<=N;i++){
             // numbers
-            for(int j =1;j<i;j++){
-                System.out.println(j);
+            for(int j =1;j<=i;j++){
+                System.out.print(j);
             }
             // space
-            for(int j=1; j<space;j++)
-            System.out.println("");
+            for(int j=1; j<=space;j++){
+            System.out.print(" ");
+        }
             // numbers
-            for(int j =i;j<1;j--){
-                System.out.println(j);
+            for(int j =i;j>=1;j--){
+                System.out.print(j);
             }
+            // space=space-2;
+            System.out.println(" ");
+            space = space-2;
+        }
+
+    }
+    static void pattern13(int N){
+    
+        for (char i=1; i<=N; i++){
+            for (char ch='A'; ch<='A'+ i; ch++){
+                System.out.print(ch + " " );
+                // ch++;
+            }
+            System.out.println(" ");
+        }
+
+    }
+    
+    static void pattern14(int N){
+        for(int i=0;i<N; i++){
+            for (char ch ='A'; ch <='A'+(N-i-1); ch++){
+                System.out.print(ch + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+    static  void pattern15(int N){
+       
+            for (int i =0; i<N ;  i++ ){
+            for (int j =0; j<=i; j++){
+                    {
+                    System.out.print((char)((int)( 'A'+ i)));
+                }
+            }
+            System.out.println();
         }
     }
     public static void main(String args[])
     {
-        int N =7;
+        int N =5;
         // triangle(N);
         // pattern2(N);
         // pattern3(N);
@@ -168,7 +204,9 @@ public class Pattern
         // pattern8(N);
         // pattern10(N);
         // pattern11(N);
-        pattern12(N);
+        // pattern12(N);
+        // pattern13(N);
+        pattern15(N);
 
         
     }
