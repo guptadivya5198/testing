@@ -1,93 +1,67 @@
+// creation of an array
 
-// numbers =[2,6,8,9];
-// console.log(numbers);
+let numbers = [ 1,3,4,5,6];
+console.log(numbers);
 
-// numbers.push(10);
-// console.log(numbers);
+// Instertion in Array
+// 1. End --> numbers.push
+// 2. Middele --> numbers.splice
+// 3. Start  --> numbers.unshift
 
-// numbers.unshift(1);
-// console.log(numbers);
+numbers.push(9);
+console.log(numbers);
 
-// numbers.splice(2,0,'a','b');
-// console.log(numbers);
+numbers.unshift(8);
+console.log(numbers);
 
-// numbers.indexOf(4,2);
-// console.log(numbers.indexOf(4));
+numbers.splice(2 , 0 , 'a', 'b', 'c');
+console.log(numbers);
 
-// console.log(numbers.includes(9));
+// searching
 
-// let course =[
-//     {no:1,Name:"rahul"},
-//     {no:2,Name:"raj"}
-// ];
+console.log(numbers.indexOf(4));
 
-//  let courses = course.find(courses=> courses.Name ==="rahul");
+console.log(numbers.includes("d"));
 
+console.log(numbers.indexOf(2, 4));
 
+// array of objects
 
-// console.log(courses);
+let courses = [
+    {num: 1, name: 'Divya'},
+    {num: 2, name: "prateek"}
+]
 
+console.log(courses);
 
-// removing element of array
+// to search any oject is or compare we use call by refrence using find function
 
-// let numbers = [1,2,3,4,5,6,7]
+// let course= courses.find(function(course){
+//     return course.name =='prateek'
+// });
 
-// // end
-// numbers.pop();
-// console.log(numbers);
+// console.log(course);
 
-// //beigning 
-// numbers.shift();
-// console.log(numbers);
+// another way to write a function
+let course= courses.find(course=> course.name =='prateek');
 
-// // middle
-// numbers.splice(2,1);
-// console.log(numbers);
+console.log(course);
+
+// removing an element in array
+
+let nums = [1,2,4,6,8,10];
+
+//1. remoing end = nums.pop()
+// 2. begining  = nums.shift()
+// 3. Middele = nums.splice(2,1)
+nums.pop();
+nums.shift();
+nums.splice(2,1);
+console.log(nums);
 
 // emptying an array
 
-// let numbers = [1,2,3,4,5,6,7];
-// let numbers2 = numbers;
-
-// // numbers.length = 0;
-// numbers.splice(0,numbers.length);
-// console.log(numbers);
-// console.log(numbers2);
-
-// concat 2 array
-
-// let first =[1,2,3];
-// let second =[4,5,6];
-
-// // let combined = first.concat(second);
-// let combined = [...first,...second];
-// console.log(combined);
-
-
-// let copy=[...combined];
-// console.log(copy);
-// let sliced=combined.slice(2,4);
-// console.log(sliced);
-
-// let arr=[10,20,30,40,90];
-// for(let value of arr){
-//     // console.log(value);
-// }
-
-// arr.forEach((numbers)=> console.log(numbers))
-
-
-// let numbers =[19,29,39];
-
-// let combined = numbers.join(',');
-// // console.log(combined);
-
-// let message ='this is array split method';
-// let con =message.split(' ');
-// console.log(con);
-
-let numbers =[10,29,1];
-// numbers.sort();
-numbers.reverse
-console.log(numbers);
-
+let nums2 = nums;
+nums.length = 0;
+console.log(nums);
+console.log(nums2);
