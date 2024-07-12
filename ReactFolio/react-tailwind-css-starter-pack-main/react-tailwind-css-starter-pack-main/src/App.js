@@ -1,8 +1,6 @@
 
-// // import BoxOfProduct from "./BoxOfProduct";
-// // import Product from "./pages/Product";
-
 import Product from "./Product";
+import React from "react";
 
 function App() {
   const product =[
@@ -22,7 +20,6 @@ function App() {
       date : "18-01-2025"
     },
   ];
-
   return(
     <Product produc = {product}/>
   );
@@ -30,42 +27,3 @@ function App() {
 
 
 export default App;
-
-{/* // function App() { */}
-//   const product =[
-//     {
-//       id : "p1",
-//       title : "SurfExcel",
-//       amount : 420,
-//       date : "2024-12-12",
-   
-//   },
-//   {
-//       id : "p2" ,
-//       title : "Nirma",
-//       amount : 350,
-//       date : "2024-12-12",
-      
-//   },
-//   {
-//       id : "p3",
-//       title : "Tide",
-//       amount : 550,
-//       date : "2024-12-12",
-//   },
-//   {
-//       id : "p4",
-//       title :"Maggie",
-//       amount : 670,
-//       date :"2024-12-12",
-//   },
-// ];
-  
-//   return (
-//   <Product produc={product}/>
-//   );
-// }
-
-// export default App;
-
- 
