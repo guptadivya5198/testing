@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class LinearSearch {
     public static boolean search(int arr[], int key){
@@ -14,7 +14,7 @@ public class LinearSearch {
     public static void main(String args[]){
        int arr[] = {10,7,8,5,4,3};
        System.out.println("enter the key : "  );
-       int  key;
+       int  key = Integer.parseInt(new Scanner(System.in).nextLine());
 
         boolean found = search(arr,key);
         if(found){

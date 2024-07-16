@@ -1,45 +1,44 @@
 import React from "react";
-import Item from './Component/Item';
-import ItemDate from "./Component/ItemDate";
-import Card from "./Component/Card";
+import Product from './Component/Product';
 
-
-function App() {
-   const Response =[
+const App=() =>{
+   const products =[
     {
-      Itemname : "Nirma",
-      Itemdate : " 20 ",
-      Itemmonth : " June ",
-      Itemyear : " 2000 ",
+      id: 'p1',
+      title : "Nirma",
+      amount : 100,
+      date : new Date(2022,8,10),
+  
     },
 
     {
-      Itemname : "Nirma2",
-      Itemdate : " 202",
-      Itemmonth : " July ",
-      Itemyear : " 2002 ",
+      id: 'p2',
+      title : "SurfExcel",
+      amount : 200,
+      date : new Date(2022,2,12),
+  
     },
+
     {
-      Itemname : "Nirma3",
-      Itemdate : " 203 ",
-      Itemmonth : " August ",
-      Itemyear : " 2003 ",
+      id: 'p3',
+      title : "Tide",
+      amount : 300,
+      date : new Date(2022,10,12),
+  
+    },
+
+    {
+      id: 'p4',
+      title : "Airel",
+      amount : 400,
+      date : new Date(2022,11,8),
+  
     },
   ];
   return (
-    <div>
-      <Card>
-      <Item name ={Response[0].Itemname}></Item> 
-      <ItemDate day = {Response[0].Itemdate} month={Response[0].Itemmonth} year={Response[0].Itemyear}></ItemDate>
-
-      <Item name ={Response[1].Itemname}></Item> 
-      <ItemDate  day = {Response[1].Itemdate} month={Response[1].Itemmonth} year={Response[1].Itemyear}></ItemDate>
-
-      <Item name ={Response[2].Itemname}></Item> 
-      <ItemDate  day = {Response[2].Itemdate} month={Response[2].Itemmonth} year={Response[2].Itemyear}></ItemDate>
-      <div className="w-[100vw] h-[100vh] bg-blue-200 text-6xl text-center ">Hello Jii</div>
-</Card>
-    </div>
+      <div>
+        <Product items={products}/>
+      </div>
   );
 }
 
