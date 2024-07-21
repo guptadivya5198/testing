@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: x-large;
+}
+.container{
+    border: 1px solid white;
+    padding: 10px 52px;
+
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+    color: purple;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+/* .button{
+    font-size: x-large;
+    font-weight: 40;
+    border-radius: 9px;
+} */
