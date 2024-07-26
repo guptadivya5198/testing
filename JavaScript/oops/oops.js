@@ -44,3 +44,4 @@ Object.prototype.hitesh = function(){
 }
 // heroPower.hitesh()
 myHeros.hitesh()
+
