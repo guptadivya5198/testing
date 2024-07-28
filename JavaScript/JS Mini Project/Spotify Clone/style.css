@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+nav{
+    font-family: "Montserrat", sans-serif;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 15px;
+
+}
+.brand img{
+    width: 58px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 0 8px; 
+}
+
+.container{
+    height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 65%;
+    border-radius: 12px;
+    padding: 35px;
+    background-image: url('img.jpg');
+}
+
+.bottom{
+    position: sticky;
+    height: 100px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#myProgressBar{
+    width: 60vw;
+    text-align: center;
+    cursor: pointer;
+}
+.icons{
+    margin-top: 14px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+.icons img{
+    width: 41;
+    height: 45px;
+    color: white;
+    background: white;
+}
+
+.songItem{
+ display: flex;
+ color: black;
+ width: 345px;
+ height: 54px;
+ font-weight: bolder;
+ margin: 15px 0px;
+ padding: 4px;
+ justify-content: space-between;
+ align-items: center;
+ background-color: white;
+ border-radius: 10px;
+}
+.songItem img{
+    height: 52px;
+    margin: -10px 10px;
+    align-items: center;
+    border-radius: 95px;
+}
+
+.cen{
+    margin-bottom: 20px;
+}
+
+.cen i{
+    cursor: pointer;
+}
+
+.cen img{
+  height: 40px;
+  margin-top: 8px ;
+}
+
+
