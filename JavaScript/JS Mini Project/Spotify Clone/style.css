@@ -70,12 +70,12 @@ nav ul li{
 
 .icons i{
     cursor: pointer;
-}
-.icons img{
-    width: 41;
+    width: 50px;
     height: 45px;
-    color: white;
-    background: white;
+}
+#solid{
+    width: 50px;
+    height: 50px;
 }
 
 .songItem{
@@ -99,16 +99,10 @@ nav ul li{
 }
 
 .cen{
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    margin-right: 22px;
 }
 
 .cen i{
     cursor: pointer;
 }
-
-.cen img{
-  height: 40px;
-  margin-top: 8px ;
-}
-
-
