@@ -1,11 +1,14 @@
-
-
-
+import Register from './Components/Register';
+import About from './Screens/About';
+import Contact from './Screens/Contact';
 function App() {
-
   return (
-    <h1>Chai or React | Divya Gupta</h1>
-  )
+    <div>
+      <Register />
+      {/* <About /> */}
+      {/* <Contact /> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
