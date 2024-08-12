@@ -1,10 +1,14 @@
-import Home from './Pages/Home';
+import CardItems from './Pages/CardItems';
+import Navbar from './Pages/Navbar';
+import Footer from './services/Footer';
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <div>
+      <Navbar />
+      <CardItems />
+      <Footer />
+    </div>
   );
 }
 

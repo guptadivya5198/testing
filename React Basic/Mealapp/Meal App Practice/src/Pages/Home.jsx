@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
+
 function Home() {
+  useEffect;
   return (
     <div>
       <p>Categories</p>
