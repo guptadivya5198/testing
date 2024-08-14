@@ -1,22 +1,16 @@
-import { Avatar, Icon, IconButton, Menu, MenuItem } from '@mui/material';
+import { Avatar } from '@mui/material';
 import React from 'react';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { toast } from 'react-toastify';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const Cards = ({ likedItem, setLikedItem, item }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const open = Bollean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
     <div className="w-[25vw] bg-blue-200 flex flex-col items-center p-2">
       <div className="w-full flex justify-between">
