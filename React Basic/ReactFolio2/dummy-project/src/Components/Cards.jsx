@@ -1,24 +1,10 @@
 import React from 'react';
 import Card from './Card';
 
-function Cards({ courses }) {
-  let allCourses = [];
-  const getCourses = () => {
-    Object.values(courses).forEach((courseCategory) => {
-      courseCategory.forEach((course) => {
-        allCourses.push(course);
-      });
-    });
-    return allCourses;
-  };
-
-  return (
-    <div>
-      {getCourses().map((course) => {
-        <Card course={course} />;
-      })}
-    </div>
-  );
+function Cards(props) {
+  let courses = props.courses;
+  console.log('Printing data');
+  console.log(courses);
+  return <div></div>;
 }
-
 export default Cards;

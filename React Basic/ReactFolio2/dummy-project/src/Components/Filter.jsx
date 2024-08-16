@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Filter({ filterData }) {
+function Filter(props) {
+  let filterData = props.filterData;
   return (
     <div>
       {filterData.map((data) => {
-        return <button>{data.title}</button>;
+        return <button key={data.id}>{data.title}</button>;
       })}
     </div>
   );
