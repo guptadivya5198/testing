@@ -1,19 +1,53 @@
 import React from 'react';
-import { FcLike } from 'react-icons/fc';
-function Card({ course }) {
+import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
+import { toast } from 'react-toastify';
+
+function Card(props) {
+  let course = props.course;
+  let likedCourses = props.likedCourses;
+  let setLikedCourses = props.setLikedCourses;
+  let category = props.category;
+
+  function clickHandler() {
+    if (likedCourses.includes(course.id)) {
+      // phle se like hua pda hai
+      setLikedCourses((prev) => prev.filter((cid) => cid !== course.id));
+      toast.warning('Liked Remove');
+    } else {
+      // phle se liked nhi hai
+      // insert karna hai ye course likedcourses me
+      if (likedCourses.length === 0) {
+        setLikedCourses([course.id]);
+      } else {
+        // non-empty hai
+        setLikedCourses((prev) => [...prev, course.id]);
+      }
+      toast.success('Liked Successfully');
+    }
+  }
   return (
-    <div>
-      <div>
-        <img src={course.image.url}></img>
-        <div>
-          <button>
-            <FcLike fontSize="1.75rem" />
+    <div className="w-[300px] bg-slate-900 bg-opacity-80 rounded-md overflow-hidden">
+      <div className="relative">
+        <img src={course.image.url} />
+        <div className="w-[40px] h-[40px] rounded-full bg-white absolute right-2 bottom-[-13px] grid place-items-center">
+          <button onClick={clickHandler}>
+            {likedCourses.includes(course.id) ? (
+              <FcLike fontSize="1.75rem" />
+            ) : (
+              <FcLikePlaceholder fontSize="1.75rem" />
+            )}
           </button>
         </div>
       </div>
-      <div>
-        <p>{course.title}</p>
-        <p>{course.description}</p>
+      <div className="p-4">
+        <p className="text-white text-lg font-semibold leading-6">
+          {course.title}
+        </p>
+        <p className="text-white mt-2">
+          {course.description.length > 100
+            ? course.description.substr(0, 100) + '...'
+            : course.description}
+        </p>
       </div>
     </div>
   );
