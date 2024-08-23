@@ -9,7 +9,7 @@ export const filterData = [
   },
   {
     id: '3',
-    title: 'Buisness',
+    title: 'Business',
   },
   {
     id: '4',
@@ -17,7 +17,7 @@ export const filterData = [
   },
   {
     id: '5',
-    title: 'LifeStyle',
+    title: 'Lifestyle',
   },
 ];
 

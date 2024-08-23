@@ -25,8 +25,9 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+  console.log(courses);
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-slate-700">
       <div>
         <Navbar />
       </div>
