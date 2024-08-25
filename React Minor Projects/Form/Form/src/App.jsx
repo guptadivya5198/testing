@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center mt-2  w-[1700px] h-[850px] ">
+    <div className="flex bg-gray-100 flex-col items-center mt-2  w-[1700px] h-[850px] ">
       <form
         className="shadow-xl border border-blue-100 items-center pt-4 mt-1 px-10 w-[700px] h-[840px]"
         onSubmit={submitHandler}
