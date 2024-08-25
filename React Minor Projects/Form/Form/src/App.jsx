@@ -25,53 +25,70 @@ function App() {
     }));
   }
 
+  function submitHandler(event) {
+    event.preventDefault();
+    console.log('Finally Printing the value of Form Data');
+    console.log(formData);
+  }
+
   return (
-    <div className="flex flex-col items-center mt-2">
-      <form>
-        <label htmlFor="firstName">First Name</label>
+    <div className="flex flex-col items-center mt-2  w-[1700px] h-[850px] ">
+      <form
+        className="shadow-xl border border-blue-100 items-center pt-4 mt-1 px-10 w-[700px] h-[840px]"
+        onSubmit={submitHandler}
+      >
+        <label className="font-medium" htmlFor="firstName">
+          First Name
+        </label>
         <br />
         <input
           type="text"
           name="firstName"
           id="firstName"
-          placeholder="Love"
+          placeholder="Divya"
           value={formData.firstName}
           onChange={changeHandler}
-          className="outline rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="lastName">Last Name</label>
+        <label className="font-medium" htmlFor="lastName">
+          Last Name
+        </label>
         <br />
         <input
           type="text"
           name="lastName"
           id="lastName"
-          placeholder="Babbar"
+          placeholder="Gupta"
           value={formData.lastName}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="email">Email</label>
+        <label className="font-medium" htmlFor="email">
+          Email
+        </label>
         <br />
         <input
           type="email"
           name="email"
           id="email"
-          placeholder="Babbar12@fmail.com"
+          placeholder="divya12@gmail.com"
           value={formData.email}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="country">Country</label>
+        <label className="font-medium" htmlFor="country">
+          Country
+        </label>
         <br />
         <select
           name="country"
           id="country"
           value={formData.country}
           onChange={changeHandler}
-          className="outline"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         >
           <option>India</option>
           <option>United States</option>
@@ -80,7 +97,10 @@ function App() {
         </select>
 
         <br />
-        <label htmlFor="streetAddress"> StreetAddress</label>
+        <label className="font-medium" htmlFor="streetAddress">
+          {' '}
+          StreetAddress
+        </label>
         <br />
         <input
           type="text"
@@ -89,10 +109,13 @@ function App() {
           placeholder="B-25C"
           value={formData.streetAddress}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="city"> City</label>
+        <label className="font-medium" htmlFor="city">
+          {' '}
+          City
+        </label>
         <br />
         <input
           type="text"
@@ -101,10 +124,13 @@ function App() {
           placeholder="Lucknow"
           value={formData.city}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="state"> State / Province</label>
+        <label className="font-medium" htmlFor="state">
+          {' '}
+          State / Province
+        </label>
         <br />
         <input
           type="text"
@@ -113,10 +139,13 @@ function App() {
           placeholder="UttarPradesh"
           value={formData.state}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
-        <label htmlFor="postalcode"> Postal Code</label>
+        <label className="font-medium" htmlFor="postalcode">
+          {' '}
+          Postal Code
+        </label>
         <br />
         <input
           type="text"
@@ -125,11 +154,11 @@ function App() {
           placeholder="110077"
           value={formData.postalcode}
           onChange={changeHandler}
-          className="outline  rounded-sm"
+          className="border border-blue-700 px-1 w-[550px] rounded-[3px]"
         />
         <br />
         <fieldset>
-          <legend>By Email</legend>
+          <legend className="font-medium pt-2">By Email</legend>
           <div className="flex">
             <input
               type="checkbox"
@@ -138,8 +167,10 @@ function App() {
               checked={formData.comments}
               onChange={changeHandler}
             />
-            <div>
-              <label htmlFor="comments">Comments</label>
+            <div className="items-center mt-3 pt-1 px-2">
+              <label className="font-medium " htmlFor="comments">
+                Comments
+              </label>
               <p> Get Notified when someone posts a comment on a posting.</p>
             </div>
           </div>
@@ -152,8 +183,10 @@ function App() {
               checked={formData.candidates}
               onChange={changeHandler}
             />
-            <div>
-              <label htmlFor="candidates">Candidates</label>
+            <div className="items-center mt-3 pt-1 px-2">
+              <label className="font-medium " htmlFor="candidates">
+                Candidates
+              </label>
               <p> Get Notified when candidates apply for a job.</p>
             </div>
           </div>
@@ -166,17 +199,20 @@ function App() {
               checked={formData.offers}
               onChange={changeHandler}
             />
-            <div>
-              <label htmlFor="offers">Offers</label>
+            <div className="items-center mt-3 pt-1 px-2">
+              <label className="font-medium" htmlFor="offers">
+                Offers
+              </label>
               <p> Get Notified when candidates accept and reject offers.</p>
             </div>
           </div>
         </fieldset>
-        <br />
 
         <fieldset>
-          <legend>Push Notification</legend>
-          <p>These are delivered via a SMS to your mobile number</p>
+          <legend className="font-medium pt-2.5">Push Notification</legend>
+          <p className="mb-1 ">
+            These are delivered via a SMS to your mobile number
+          </p>
           <input
             type="radio"
             name="pushNotification"
@@ -184,7 +220,9 @@ function App() {
             value="Everything"
             onChange={changeHandler}
           />
-          <label htmlFor="pushEverything">EveryThing</label>
+          <label className="font-medium px-2.5 pt-2.5" htmlFor="pushEverything">
+            EveryThing
+          </label>
 
           <br />
           <input
@@ -194,7 +232,9 @@ function App() {
             value="Same as Email"
             onChange={changeHandler}
           />
-          <label htmlFor="pushEmail">Same as Email</label>
+          <label className="font-medium px-2.5 py-5" htmlFor="pushEmail">
+            Same as Email
+          </label>
 
           <br />
           <input
@@ -204,8 +244,15 @@ function App() {
             value="No push Notification"
             onChange={changeHandler}
           />
-          <label htmlFor="pushNothing">No push Notification</label>
+          <label className="font-medium px-2.5 py-5" htmlFor="pushNothing">
+            No push Notification
+          </label>
         </fieldset>
+        <div className="pt-4">
+          <button className="bg-blue-500 text-white font-bold rounded py-2 px-2 w-20">
+            Save
+          </button>
+        </div>
       </form>
     </div>
   );
