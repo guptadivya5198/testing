@@ -1,40 +1,24 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
-import Home from './Components/Home';
-import About from './Components/About';
-import Support from './Components/Support';
-import Labs from './Components/Labs';
-import PageNotFound from './Components/PageNotFound';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
+import DashBoard from './Pages/DashBoard';
+import { useState } from 'react';
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(false);
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/support">Support</Link>
-          </li>
-          <li>
-            <Link to="/labs">Labs</Link>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/labs" element={<Labs />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </div>
-    </>
+    <div>
+      <NavBar isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path=" signup" element={<SignUp />} />
+        <Route path="dashboard" element={<DashBoard />} />
+      </Routes>
+    </div>
   );
 }
 
