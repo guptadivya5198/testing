@@ -5,12 +5,14 @@ function NavBar(props) {
   let isLoggedIn = props.isLoggedIn;
   let setLoggedIn = props.setLoggedIn;
   return (
-    <div className="flex justify-evenly">
+    <div className="flex justify-between items-center w-11/12 max-w-[1106px] mx-[320px] py-4 ">
       <Link to="/">
-        <div className="font-bold text-4xl ">Personal Portfolio</div>
+        <div className="font-bold text-3xl mx-12 text-white ">
+          Personal Portfolio
+        </div>
       </Link>
       <nav>
-        <ul className="flex gap-5 ml-5">
+        <ul className="flex gap-x-6 ml-5 text-white">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -22,20 +24,25 @@ function NavBar(props) {
           </li>
         </ul>
       </nav>
-      <div className="flex ml-5 mr-3 gap-4">
+      <div className="flex items-center gap-x-4">
         {!isLoggedIn && (
           <Link to="/login">
-            <button>Login</button>
+            <button className="border border-richblack-700 bg-richblack-800 rounded-[8px] py-[8px] px-[12px] text-white">
+              Login
+            </button>
           </Link>
         )}
         {!isLoggedIn && (
           <Link to="/signup">
-            <button>Sign Up</button>
+            <button className="border border-richblack-700 bg-richblack-800 rounded-[8px] py-[8px] px-[12px] text-white">
+              Sign Up
+            </button>
           </Link>
         )}
         {isLoggedIn && (
           <Link to="/">
             <button
+              className="border border-richblack-700 bg-richblack-800 rounded-[8px] py-[8px] px-[12px] text-white"
               onClick={() => {
                 setLoggedIn(false);
                 toast.success('Logged out');
@@ -47,7 +54,9 @@ function NavBar(props) {
         )}
         {isLoggedIn && (
           <Link to="/dashboard">
-            <button>Dashboard</button>
+            <button className="border border-richblack-700 bg-richblack-800 rounded-[8px] py-[8px] px-[12px] text-white">
+              Dashboard
+            </button>
           </Link>
         )}
       </div>
