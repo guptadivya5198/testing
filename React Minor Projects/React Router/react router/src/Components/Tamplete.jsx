@@ -6,7 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 
 function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
   return (
-    <div className="flex w-11/12 max-w-[1160px] mx-auto py-12 gap-x-12 gap-y-0">
+    <div className="flex justify-between w-11/12 max-w-[1160px] mx-auto py-12 gap-x-10 gap-y-0">
       <div className="w-11/12 max-w-[450px] mx-0">
         <h1 className="text-white font-semibold text-[1.875rem] leading-[2.375rem]">
           {title}
@@ -16,6 +16,7 @@ function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
           <br />
           <span className="text-blue-100 italic">{descr2}</span>
         </p>
+        <br />
         {formtype === 'signup' ? (
           <SignupForm setLoggedIn={setLoggedIn} />
         ) : (
@@ -32,7 +33,7 @@ function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
           Sign In with Google
         </button>
       </div>
-      <div>
+      <div className="relative w-11/12 max-w-[450px]">
         <img
           src={frameImage}
           alt="Pattern"
@@ -46,6 +47,7 @@ function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
           width={548}
           height={490}
           loading="lazy"
+          className=" absolute right-4 -top-4 "
         />
       </div>
     </div>
