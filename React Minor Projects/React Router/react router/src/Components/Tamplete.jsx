@@ -6,12 +6,12 @@ import { FcGoogle } from 'react-icons/fc';
 
 function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
   return (
-    <div className="flex justify-between w-11/12 max-w-[1160px] mx-auto py-12 gap-x-10 gap-y-0">
-      <div className="w-11/12 max-w-[450px] mx-0">
-        <h1 className="text-white font-semibold text-[1.875rem] leading-[2.375rem]">
+    <div className="flex justify-between w-11/12 max-w-[1190px] mx-auto py-3 gap-x-[5px] gap-y-0">
+      <div className="w-full max-w-[480px] ">
+        <h1 className="text-white font-semibold text-[1.575rem] leading-[2.375rem]">
           {title}
         </h1>
-        <p className="text-[1.125rem] leading-[1.625rem] mt-4">
+        <p className="text-[1.025rem] leading-[1.625rem] mt-1">
           <span className="text-slate-100 ">{descr1}</span>
           <br />
           <span className="text-blue-100 italic">{descr2}</span>
@@ -22,18 +22,18 @@ function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
         ) : (
           <LoginForms setLoggedIn={setLoggedIn} />
         )}
-        <div className="flex w-full items-center my-4 gap-x-2">
+        <div className="flex w-full items-center my-3 gap-x-2">
           <div className="w-full h-[1px] bg-slate-700"></div>
           <p className="font-medium text-slate-50 leading-[1.375rem]">OR</p>
           <div className="w-full h-[1px] bg-slate-700"></div>
         </div>
 
-        <button className="w-full flex justify-center rounded-[8px] font-medium border border-slate-700  text-slate-50 px-[12px] py-[8px] gap-x-2 mt-6">
-          <FcGoogle />
+        <button className="w-full flex justify-center rounded-[8px] font-medium border border-slate-700  text-slate-50 px-[12px] py-[8px] gap-x-2 ">
+          <FcGoogle className="mt-1 center" />
           Sign In with Google
         </button>
       </div>
-      <div className="relative w-11/12 max-w-[450px]">
+      <div className="relative w-11/12 max-w-[450px] mt-3 py-4">
         <img
           src={frameImage}
           alt="Pattern"
@@ -45,9 +45,9 @@ function Tamplate({ title, descr1, descr2, image, formtype, setLoggedIn }) {
           src={image}
           alt="Pattern2"
           width={548}
-          height={490}
+          height={460}
           loading="lazy"
-          className=" absolute right-4 -top-4 "
+          className=" absolute right-3  top-2 "
         />
       </div>
     </div>

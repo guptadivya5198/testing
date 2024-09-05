@@ -23,6 +23,8 @@ function LoginForms({ setLoggedIn }) {
     event.preventDefault();
     setLoggedIn(true);
     toast.success('Logged In');
+    console.log('Printing the form data');
+    console.log(formData);
     navigate('/dashboard');
   }
   return (
@@ -41,9 +43,8 @@ function LoginForms({ setLoggedIn }) {
           className="bg-slate-900 hover:shadow-white hover:cursor-pointer text-slate-200 w-full p-[12px] rounded-[0.5rem]"
         />
       </label>
-
       <label className="w-full relative">
-        <p className="text-[0.998rem] text-slate-50 mb-1 mt-4 leading-[1.375rem]">
+        <p className="text-[0.998rem] text-slate-50 mb-1 mt-3 leading-[1.375rem]">
           Password <sup className="text-red-500">*</sup>
         </p>
         <input
@@ -56,7 +57,7 @@ function LoginForms({ setLoggedIn }) {
           className="bg-slate-900 hover:shadow-white text-slate-200 w-full p-[12px] rounded-[0.5rem]"
         />
         <span
-          className="absolute right-3 top-[90px] cursor-pointer "
+          className="absolute right-3 top-[89px] cursor-pointer"
           onClick={() => setShowPassword((prev) => !prev)}
         >
           {showPassword ? (
@@ -71,7 +72,7 @@ function LoginForms({ setLoggedIn }) {
           </p>
         </Link>
       </label>
-      <button className="bg-yellow-400 w-full rounded-[8px] text-slate-950 px-[10px] py-[8px] mt-6 font-medium">
+      <button className="bg-yellow-400 w-full rounded-[8px] text-slate-950 px-[10px] py-[8px] mt-4 font-medium">
         Sign In
       </button>
     </form>
