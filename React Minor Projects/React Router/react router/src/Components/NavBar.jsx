@@ -7,8 +7,8 @@ function NavBar(props) {
   return (
     <div className="flex justify-between items-center w-11/12 max-w-[1106px] mx-[320px] py-4 ">
       <Link to="/">
-        <div className="font-bold text-3xl mx-12 text-white ">
-          Personal Portfolio
+        <div className="font-bold text-3xl mx-12 text-white underline ">
+          Interactive Form
         </div>
       </Link>
       <nav>
